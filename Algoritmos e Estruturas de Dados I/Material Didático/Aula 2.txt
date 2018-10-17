@@ -1,0 +1,171 @@
+Pontifícia Universidade Católica de Minas Gerais
+Instituto de Ciências Exatas e Informática
+Curso de Ciências da Computação
+
+Disciplina: Algoritmos e Estrutura de Dados I
+Assunto   : Resumo
+
+1. Ferramentas no sistemas operacional
+
+// ----------------- ferramentas Java
+
+// Windows
+   cmd
+
+// Linux
+   terminal
+
+// para verificar a disponibilidade e a versao do compilador    de Java
+
+javac -version
+
+// para verificar a disponibilidade e a versao do interpretador de Java
+
+java  -version
+
+// para compilar (programa fonte : Programa.java  <- JDK=Java Development Kit)
+
+// Windows
+javac -cp JAVAHOME/IO.jar;JAVAHOME/jkarel.jar;./ Programa.java
+
+// Linux
+javac -cp JAVAHOME/IO.jar:JAVAHOME/jkarel.jar:./ Programa.java
+
+// para executar (programa objeto: Programa.class <- JRE=Java Runtime Environment)
+
+// Windows
+java  -cp JAVAHOME/IO.jar;JAVAHOME/jkarel.jar;./ Programa
+
+// Linux
+java  -cp JAVAHOME/IO.jar:JAVAHOME/jkarel.jar:./ Programa
+
+
+2. Componentes de programa em Java
+
+// ----------------- componentes Java
+
+// importar definicoes 
+import _package_.*;
+
+/**
+ * Classe.
+ */
+public class _Name_
+//     extends _otherClass_
+{
+} // end class
+
+/**
+ * Acao principal.
+ */
+public static void main ( String [ ] args )
+{
+} // end main ( )
+
+// comentario (simples)
+
+/*
+   comentario
+   em mais de
+   uma  linha
+*/
+
+/**
+   comentario (resumo para documentacao)
+*/
+
+// cabecalho de bloco (assinatura)
+{
+  // bloco
+} // end
+
+/**
+ * Metodo (Funcao).
+ */
+public type _function_ ( )
+{
+  type variable = value;
+  return ( variable );
+} // end _function_ ( )
+
+/**
+ * Metodo (Procedimento).
+ */
+public void _procedure_ ( )
+{
+} // end _procedure_ ( )
+
+
+// ----------------- tipos de dados em Java
+
+// ----------------- primitivos
+boolean b = true;
+char    c = '0' ;    // '0' = 48   
+double  d = 3.14;
+int     x =  0  ;
+
+// ----------------- Objetos
+Boolean   oB;
+Character oC;
+Double    oD;
+Integer   oX;
+String    s = "abc";
+           //  012 <- posicoes
+
+
+// ----------------- componentes JKarel
+
+// dependencias
+import jkarel.World;
+import jkarel.Robot;
+
+// construir objeto
+_RobotClass_ _robot_ = new _RobotClass_ ( avenue, street, direction, beepers );
+
+// acoes nativas
+_robot_.move( );      
+_robot_.turnLeft( );  
+_robot_.pickBeeper( );
+_robot_.putBeeper( ); 
+
+// ----------------- componentes IO
+
+// dependencias
+import IO.*;
+                                  // valor individual
+boolean b = false  ;
+char    c = 'a'    ;     // 'A' = 65 e 'a' = 97
+double  d = 1.0e-3 ;     // 1.0e-3 = 0.001     
+int     x = -1     ;
+String  s = "ab cd";
+
+String [ ] args = { "ab", "cd" }; // valores agrupados
+
+IO.print   ( "teste " ); // mostrar e nao mudar de linha
+IO.println ( "01" );     // mostrar e     mudar de linha
+
+IO.println ( "b= "+b );
+IO.println ( "c= "+c );
+IO.println ( "d= "+d );
+IO.println ( "x= "+x );
+IO.println ( "s= "+s );
+
+b = IO.readboolean ( "Entrar com valor logico : " );
+c = IO.readchar    ( "Entrar com caractere    : " );
+d = IO.readdouble  ( "Entrar com valor real   : " );
+x = IO.readint     ( "Entrar com valor inteiro: " );
+s = IO.readString  ( "Entrar com palavra      : " );
+
+IO.print   ( "b= "+b+" c="+c );
+IO.println ( );         // mudar de linha
+IO.print   ( "d= "+d+" x="+x );
+IO.println ( );         // saltar   linha
+IO.println ( "s= "+s );
+IO.println ( );
+
+s = IO.readln      ( "Entrar com sentenca     : " );
+IO.println ( "s= "+s );
+
+OBS.: Para mais detalhes e exemplos, 
+      consultar a documentacao pertinente
+      e as referencias indicadas.

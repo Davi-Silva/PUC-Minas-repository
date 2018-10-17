@@ -1,0 +1,131 @@
+Pontifícia Universidade Católica de Minas Gerais
+Instituto de Ciências Exatas e Informática
+Curso de Ciências da Computação
+
+Disciplina: Algoritmos e Estrutura de Dados I
+Assunto   : Resumo
+
+1. Etapas para solução de um problema 
+          
+    -> problema
+   |       |            <- análise e síntese de solução / estudos de casos 
+   |   algoritmo
+   |       |            <- codificação                  / pacotes de dados
+   |   programa (fonte)    // Programa.java
+   |       |            <- tradução (compilação)        / preparação de testes    
+   |   programa (objeto)   // Programa.class
+   |       |            <- execução                     / submissão  de testes
+   |   solução
+   |       |            <- verificação                  / análise dos resultados
+    -------                                             / aceitação | novos 
+
+
+
+2. Ferramentas 
+
+// ----------------- ferramentas Java
+
+// Windows
+   cmd
+
+// Linux
+   terminal
+
+// para verificar a disponibilidade e a versao do compilador    de Java
+
+javac -version
+
+// para verificar a disponibilidade e a versao do interpretador de Java
+
+java  -version
+
+// para compilar (programa fonte : Programa.java  <- JDK=Java Development Kit)
+
+// Windows
+javac -cp JAVAHOME/IO.jar;JAVAHOME/jkarel.jar;./ Programa.java
+
+// Linux
+javac -cp JAVAHOME/IO.jar:JAVAHOME/jkarel.jar:./ Programa.java
+
+// para executar (programa objeto: Programa.class <- JRE=Java Runtime Environment)
+
+// Windows
+java  -cp JAVAHOME/IO.jar;JAVAHOME/jkarel.jar;./ Programa
+
+// Linux
+java  -cp JAVAHOME/IO.jar:JAVAHOME/jkarel.jar:./ Programa
+
+
+
+3. Exemplo de programa em Java
+
+3.a  Editar arquivo texto com nome e extensão (Teste.java) 
+     e com o conteúdo de programa abaixo. 
+   
+     public class Teste
+     {
+        public static void main ( String [ ] args )
+        {
+          System.out.println ( "Teste em execucao" );
+        }
+     } 
+
+     OBS.: Não usar espaços em branco nos nomes de programa ou pastas.
+           Não usar acentos, cedilha ou outros caracteres especiais.
+           Respeitar maiúsculas e minúsculas nas palavras próprias
+           da linguagem de programação, bem como a sua pontuação. 
+
+3.b  Executar o comando abaixo no ambiente operacional.
+
+     javac -cp ./ Teste.java
+  
+     Se houver erros, corrigir; senão executar o comando abaixo.
+
+     java  -cp ./ Teste
+ 
+     Verificar a saída em tela.
+
+     Teste em execucao
+
+
+
+4. Modelo de programa
+
+// dependencias
+import IO.*;
+
+/**
+ *  Identificacao
+ *  Programa:
+ *  Autor(a):
+ *  Data    :
+ *  Versao  :
+ */
+public class Teste
+{
+ /**
+  * Acao principal.
+  */
+    public static void main ( String [ ] args )
+    {
+     // definir dados 
+
+     // definir acoes
+
+     // identificar
+        IO.println ( "Programa v0.__" );
+        IO.println ( "Autor(a): ____" );
+        IO.println ( );
+ 
+     // encerrar
+        IO.pause   ( "\nApertar ENTER para terminar." );
+    } // fim main ( )
+} // fim class
+
+/*
+  Anotacoes:
+ */
+
+/*
+  Testes:
+ */
